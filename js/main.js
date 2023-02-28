@@ -8,7 +8,9 @@ class Person {
   }
   introduction() {
     const div = document.querySelector("div");
-    div.innerText = `Hi, my name is ${this.name}. I'm ${this.age} years old and I work as a ${this.occupation}.`;
+    const div2 = document.createElement("div");
+    div2.innerText = `Hi, my name is ${this.name}. I'm ${this.age} years old and I work as a ${this.occupation}.`;
+    document.body.append(div2);
   }
 }
 
@@ -26,9 +28,9 @@ class Form {
 }
 
 const myForm = document.querySelector("form");
+const form = new Form(myForm);
 myForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const form = new Form(myForm);
   form.handleSubmit();
   event.target.reset();
 });
