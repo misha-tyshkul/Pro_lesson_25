@@ -7,7 +7,6 @@ class Person {
     this.occupation = occupation;
   }
   introduction() {
-    const div = document.querySelector("div");
     const div2 = document.createElement("div");
     div2.innerText = `Hi, my name is ${this.name}. I'm ${this.age} years old and I work as a ${this.occupation}.`;
     document.body.append(div2);
